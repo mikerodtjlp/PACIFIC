@@ -1,0 +1,26 @@
+{
+"zsystem":"$SYSTEM$",
+"gatport":"$ATLGATPRT$",
+"servers":{
+	"gat_svr":"$ATLGATSVR$","gatport":"$ATLGATPRT$",
+	"hlp_svr":"$PROXYSVR$",
+	"web_svr":"$PROXYSVR$:$PROXYPRT$"
+},
+"netsites":{
+	"nsites":"6",
+	"site0":{"name":"proxy",	"address":"$PROXYSVR$:$PROXYPRT$]",	"zsystem":"MRO","model":"0","checkses":"0"},
+	"site1":{"name":"core",		"address":"$CORESVR$:$COREPRT$",	"zsystem":"MRO","model":"0","checkses":"1"},
+	"site2":{"name":"gat",		"address":"$ATLGATSVR$:$ATLGATPRT$",	"zsystem":"MRO","model":"1","service":"service0", "checkses":"0"},
+	"site3":{"name":"app",		"address":"$APPSVR$:$APPPRT$",		"zsystem":"MRO","model":"0","checkses":"1","dumplog":"1"},
+	"site4":{"name":"reports",	"address":"$REPORTSSVR$:$REPORTSPRT$",	"zsystem":"MRO","model":"0","checkses":"1","dumplog":"1"}
+	"site5":{"name":"appcore",	"address":"$APPCORESVR$:$APPCOREPRT$",	"zsystem":"MRO","model":"0","checkses":"1","dumplog":"1"},
+},
+
+"catlpwd":"Provider=SQLOLEDB.1;Network Library=DBMSSOCN;Persist Security Info=False;User ID=$PASSUSR$; PWD=$PASSPAS$; Initial Catalog=$PASSDBN$; Data Source=$PASSSVR$$PASSINS$; Packet Size=2560;MARS Connection=True;",
+"cpacpwd":"Data Source=$PASSSVR$$PASSINS$;Initial Catalog=$PASSDBN$; User ID=$PASSUSR$; Password=$PASSPAS$; MultipleActiveResultSets=True; Pooling=true; Max pool size=200; Min pool size=0;",
+
+"connstr":"Provider=SQLOLEDB.1;Network Library=DBMSSOCN;Persist Security Info=False;User ID=$SFCUSR$;PWD=$SFCPWD$;Initial Catalog=$SFCDBN$;Data Source=$SFCIPA$;Packet Size=2560;MARS Connection=True;",
+"conngat":"Provider=SQLOLEDB.1;Network Library=DBMSSOCN;Persist Security Info=False;User ID=$MROUSR$;PWD=$MROPWD$;Initial Catalog=$MRODBN$;Data Source=$MROIPA$$MROINS$;Packet Size=2560;MARS Connection=True;",
+"connctr":"Provider=SQLOLEDB.1;Network Library=DBMSSOCN;Persist Security Info=False;User ID=$MROUSR$;PWD=$MROPWD$;Initial Catalog=$MRODBN$;Data Source=$MROIPA$$MROINS$;Packet Size=2560;MARS Connection=True;",
+"zcoredb":"Data Source=$MROIPA$$MROINS$;Initial Catalog=$MRODBN$; User ID=$MROUSR$; Password=$MROPWD$; MultipleActiveResultSets=True; Pooling=true; Max pool size=200; Min pool size=0;"
+}

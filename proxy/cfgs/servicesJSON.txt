@@ -1,0 +1,38 @@
+{
+"zsystem":"$SYSTEM$",
+"webdom":"$DOMAIN$",
+"ndomains":"1",
+"domain0":{	
+	"active":"1",
+	"nservices":"1",
+	"service0":{
+		"active":"1",
+		"sequence":"0",
+		"name":"gate/proxy",
+		"file":"\\services\\$SYSTEM$gat.exe",
+		"priority":"above normal",
+		"params":{
+			"mainsvr":"$ATLGATSVR$","mainprt":"$ATLGATPRT$","domain":"$DOMAIN$","svrtype":"gat","timetol":"600","maxprcs":"8",
+			"loaddll":"1","loadcom":"1","loadsql":"1","chldtol":"140","isdebug":"0","loginit":"1","workpath":"","defcxpr":"8","exectyp":"1",
+			"priolst":"1","priodis":"1","priosch":"0","prioprc":"0","priores":"1","priontf":"-1",
+			"initcoms":{
+				"ncomps":"1","comp0":"mroctrl.SessionMan","prms0":""
+			}
+		},
+		"cfgpcom":{
+			"mroctrl.SessionMan":{
+				"maxtrns":"$MAXTRN$","maxnams":"$MAXNAM$","maxmacs":"$MAXMAC$","maxusrs":"$MAXUSR$","maxsess":"$MAXSES$","maxhist":"$MAXHIS$"
+			}
+		},
+		"execution":{
+			"zhdr":{"priority":"0"},
+			"zbasics":{"zzzuser":"mromain"},
+			"zznfuns":"1",
+			"zfun00z":{"dcsfunc":"flush_logs","ztypcom":"sys"},
+			"gat_svr":"$ATLGATSVR$","gatport":"$ATLGATPRT$"
+		},
+		"port":"$ATLGATPRT$",
+		"interval":"10000"
+	}
+}
+}

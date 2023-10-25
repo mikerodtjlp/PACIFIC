@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1E732FE-915A-4294-AE20-471A292FDD63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sfc</RootNamespace>
+    <AssemblyName>sfc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/sfc_engine/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\bls.cs" />
+    <Compile Include="BL\casting_BL.cs" />
+    <Compile Include="BL\manufacture_BL.cs" />
+    <Compile Include="BL\packaging_BL.cs" />
+    <Compile Include="BL\planning_BL.cs" />
+    <Compile Include="BL\qc_BL.cs" />
+    <Compile Include="BO\basenum.cs" />
+    <Compile Include="BO\basetype.cs" />
+    <Compile Include="BO\base_detail.cs" />
+    <Compile Include="BO\batch.cs" />
+    <Compile Include="BO\batch_cast_coat_relation.cs" />
+    <Compile Include="BO\batch_detail.cs" />
+    <Compile Include="BO\batch_header.cs" />
+    <Compile Include="BO\batch_lot.cs" />
+    <Compile Include="BO\box_status.cs" />
+    <Compile Include="BO\bulk_pack_dtl.cs" />
+    <Compile Include="BO\bulk_pack_upload.cs" />
+    <Compile Include="BO\group_proc_dtl.cs" />
+    <Compile Include="BO\group_proc_hdr.cs" />
+    <Compile Include="BO\line_configuration.cs" />
+    <Compile Include="BO\product_base_eye.cs" />
+    <Compile Include="BO\qc_batch_detail.cs" />
+    <Compile Include="BO\qc_batch_header.cs" />
+    <Compile Include="BO\family.cs" />
+    <Compile Include="BO\focovision.cs" />
+    <Compile Include="BO\focovision_sample.cs" />
+    <Compile Include="BO\imagenes.cs" />
+    <Compile Include="BO\Info_ImageContainer.cs" />
+    <Compile Include="BO\item_urgent.cs" />
+    <Compile Include="BO\item_urgent2.cs" />
+    <Compile Include="BO\moldloss_detail.cs" />
+    <Compile Include="BO\pallete.cs" />
+    <Compile Include="BO\production_order.cs" />
+    <Compile Include="BO\constraint.cs" />
+    <Compile Include="BO\defect.cs" />
+    <Compile Include="BO\defect_group.cs" />
+    <Compile Include="BO\defect_source.cs" />
+    <Compile Include="BO\defect_type.cs" />
+    <Compile Include="BO\depto.cs" />
+    <Compile Include="BO\diammeter.cs" />
+    <Compile Include="BO\eye.cs" />
+    <Compile Include="BO\line.cs" />
+    <Compile Include="BO\location.cs" />
+    <Compile Include="BO\lot.cs" />
+    <Compile Include="BO\lot_number.cs" />
+    <Compile Include="BO\mold.cs" />
+    <Compile Include="BO\mold_lent_match.cs" />
+    <Compile Include="BO\operador.cs" />
+    <Compile Include="BO\oven.cs" />
+    <Compile Include="BO\oven_data.cs" />
+    <Compile Include="BO\relation_pallet.cs" />
+    <Compile Include="BO\postcured_data.cs" />
+    <Compile Include="BO\product.cs" />
+    <Compile Include="BO\production_base_detail.cs" />
+    <Compile Include="BO\production_inventory.cs" />
+    <Compile Include="BO\production_order_m2o.cs" />
+    <Compile Include="BO\production_plan.cs" />
+    <Compile Include="BO\product_bulk.cs" />
+    <Compile Include="BO\product_molds_relation.cs" />
+    <Compile Include="BO\qc_aql.cs" />
+    <Compile Include="BO\qc_aql_evaluation.cs" />
+    <Compile Include="BO\qc_aql_type.cs" />
+    <Compile Include="BO\qc_block.cs" />
+    <Compile Include="BO\qc_block_detail.cs" />
+    <Compile Include="BO\qc_block_header.cs" />
+    <Compile Include="BO\qc_block_sample.cs" />
+    <Compile Include="BO\qc_history.cs" />
+    <Compile Include="BO\qc_inspection_level.cs" />
+    <Compile Include="BO\qc_inspection_result.cs" />
+    <Compile Include="BO\qc_inspection_type.cs" />
+    <Compile Include="BO\qc_netuv_detail.cs" />
+    <Compile Include="BO\qc_product_test.cs" />
+    <Compile Include="BO\qc_test.cs" />
+    <Compile Include="BO\qc_transmitance_detail.cs" />
+    <Compile Include="BO\resine_data.cs" />
+    <Compile Include="BO\resource.cs" />
+    <Compile Include="BO\SkuFileMember.cs" />
+    <Compile Include="BO\tray.cs" />
+    <Compile Include="BO\trolley.cs" />
+    <Compile Include="BO\zone.cs" />
+    <Compile Include="DAL\casting_DAL.cs" />
+    <Compile Include="DAL\manufacture_DAL.cs" />
+    <Compile Include="DAL\packaging_DAL.cs" />
+    <Compile Include="DAL\planning_DAL.cs" />
+    <Compile Include="DAL\qc_DAL.cs" />
+    <Compile Include="CLASSES\defs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mro\mro.csproj">
+      <Project>{9D671B53-781F-4C76-9D3D-17B03E10BE53}</Project>
+      <Name>mro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

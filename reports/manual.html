@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">      <!-- forza al explore a cambiarse a compatibilidad 9 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">	<!-- forza al explore a cambiarse a compatibilidad 9 -->	
+	<title>Manual</title>	
+    <script src="jquery.js"></script>	
+ </head>
+  <canvas id="myCanvas" width="1000" height="800"></canvas>
+  <script>
+
+    var m_events = new Array();
+
+	function draw_squere(context, x, y, w, h, color, text, textcolor, coloAlpha){
+	    context.save();
+		context.fillStyle = color;
+		context.globalAlpha = coloAlpha;
+		context.fillRect(x, y, w, h);		
+		context.fillStyle = textcolor;
+		context.font="18px sans-serif";
+		context.fillText(text, x+10, y+50);
+		context.fillStyle = 'green';
+        context.fillRect(x+w, y+50, 50, 1);
+		context.fillStyle = 'green';
+        context.fillRect(x+w+50, y+50-2, 5, 5);
+        context.restore();
+        var new_e = {};
+        add_to_array(x, y, w, h, text);
+
+	}	
+	function draw_squere_down(context, x, y, w, h, color, text, textcolor, coloAlpha){
+	    context.save();
+		context.fillStyle = color;
+		context.globalAlpha = coloAlpha;
+		context.fillRect(x, y, w, h);		
+		context.fillStyle = textcolor;
+		context.font="18px sans-serif";
+		context.fillText(text, x+10, y+50);
+
+		context.fillStyle = 'green';		
+        context.fillRect(x+50, y+100, 1, 50);
+		context.fillStyle = 'green';
+        context.fillRect(x+50-2, y+150, 5, 5);
+
+        context.restore();
+        add_to_array(x, y, w, h, text);
+
+	}   
+  	function draw_squere_left(context, x, y, w, h, color, text, textcolor, coloAlpha){
+	    context.save();
+		context.fillStyle = color;
+		context.globalAlpha = coloAlpha;
+		context.fillRect(x, y, w, h);		
+		context.fillStyle = textcolor;
+		context.font="18px sans-serif";
+		context.fillText(text, x+10, y+50);
+		context.fillStyle = 'green';
+        context.fillRect(x-50, y+50, 50, 1);
+		context.fillStyle = 'green';
+        context.fillRect(x-50, y+50-2, 5, 5);
+        context.restore();
+        add_to_array(x, y, w, h, text);
+
+	}	 
+	function draw_squere_only(context, x, y, w, h, color, text, textcolor, coloAlpha){
+	    context.save();
+		context.fillStyle = color;
+		context.globalAlpha = coloAlpha;
+		context.fillRect(x, y, w, h);		
+		context.fillStyle = textcolor;
+		context.font="18px sans-serif";
+		context.fillText(text, x+5, y+25);
+		add_to_array(x, y, w, h, text);
+
+    }
+
+    function add_to_array(x,y,w,h,text) {
+        var new_e = {};
+        new_e[0, 1] = x;
+        new_e[0, 2] = y;
+        new_e[0, 3] = w;
+        new_e[0, 4] = h;
+        new_e[0, 5] = text;
+        m_events.push(new_e);
+    }
+  
+  
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+	
+	canvas.addEventListener('click', on_canvas_click, false);
+
+	context.font="18px sans-serif";
+	context.fillText("Manual de Usuario de Progresivos", 50, 20);
+    
+    draw_squere(context,100, 50, 100, 100, 'yellow','planeacion','black',.5);
+    draw_squere(context,250, 50, 100, 100, 'green','generado','black',.5);
+	draw_squere(context,400, 50, 100, 100, 'red','suavizado','black',.5);
+	draw_squere(context,550, 50, 100, 100, 'grey','pulido','black',.5);
+	draw_squere(context,700, 50, 100, 100, 'blue','hermes','black',.5);
+	draw_squere_down(context,850, 50, 100, 100, 'teal','hermes cx','black',.5);
+	draw_squere_left(context,850, 200, 100, 100, 'orange','hermes cx','black',.5);
+	draw_squere_left(context,700, 200, 100, 100, 'purple','hermes cx','black',.5);
+	draw_squere_left(context,550, 200, 100, 100, 'tan','hermes cx','black',.5);
+	draw_squere_left(context,400, 200, 100, 100, 'violet','hermes cx','black',.5);
+	draw_squere_left(context,250, 200, 100, 100, 'brown','hermes cx','black',.5);
+	draw_squere_down(context,100, 200, 100, 100, 'gold','hermes cx','black',.5);
+	draw_squere(context,100,350, 100, 100, 'aqua','planeacion','black',.5);
+	draw_squere(context,250,350, 100, 100, 'indigo','planeacion','black',.5);
+	draw_squere(context,400,350, 100, 100, 'turquoise','planeacion','black',.5);
+	draw_squere(context,550,350, 100, 100, 'plum','planeacion','black',.5);
+	draw_squere_only(context,705,380,40,40, 'red','FIN','black',1);
+
+	function on_canvas_click(ev) {
+	    var x = ev.clientX - canvas.offsetLeft;
+	    var y = ev.clientY - canvas.offsetTop;
+
+	    //alert(x + ' / ' + y);
+        var str= "";
+        for (var i = 0; i < m_events.length; i++) {
+
+            if (
+                x >= m_events[i][0, 1] && x <= m_events[i][0, 1] + m_events[i][0, 3]
+                &&
+                y >= m_events[i][0, 2] && y <= m_events[i][0, 2] + m_events[i][0, 4]
+              ) 
+            {
+                str += m_events[i][0, 1] + "  -   ";
+                str += m_events[i][0, 2] + "  -   ";
+                str += m_events[i][0, 3] + "  -   ";
+                str += m_events[i][0, 4] + "  -   ";
+                str += m_events[i][0, 5] + "  -   ";
+            }
+
+        }
+
+        if (str !== "") alert(str);
+	}
+
+  </script>
+  <div id="pop-up">
+</html>

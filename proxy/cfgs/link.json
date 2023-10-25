@@ -1,0 +1,5 @@
+{
+"linkdb":"LOC",
+"LOC":"Data Source=localhost\\SQLEXPRESS01;Initial Catalog=CORE; User ID=mro; Password=mro; MultipleActiveResultSets=True; Pooling=true; Max pool size=200; Min pool size=0;",
+"PRD":"Data Source=localhost\\SQLEXPRESS01;Initial Catalog=CORE; User ID=mro; Password=mro; MultipleActiveResultSets=True; Pooling=true; Max pool size=200; Min pool size=0;"
+}

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<script>
+(function () {
+  let createjs = r => { document.open(), document.write(r), document.close() }
+
+  let entry = 'mro.html';
+  let l = localStorage;
+  l.setItem('mro.html.ver.new', '1.06.21');
+  l.setItem('core.js.ver.new', '2.06.21');
+  l.setItem('extra.js.ver.new', '3.06.21');
+  l.setItem('tre.js.ver.new', '4.06.21');
+  l.setItem('ctr.js.ver.new', '5.06.21');
+  l.setItem('men.js.ver.new', '6.06.21');
+
+  let v = l.getItem(entry + '.ver.new');
+  let d = l.getItem(entry + '.ver') !== v;
+  if (!d) {
+    let r = l.getItem(entry);
+    if (r === null || r === '') d = true;
+    else createjs(r);
+  }
+  if (d) {
+    l.setItem(entry + '.ver', v);
+
+    let req = new Request('web/' + entry, {
+      method: 'get',
+      mode: 'cors',
+      redirect: 'follow',
+      headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" }
+    });
+    fetch(req).then(response => response.text()).then(r => {
+      l.setItem(entry, r);
+      createjs(r);
+    });
+  }
+})();
+</script>
+</body>
+</html>

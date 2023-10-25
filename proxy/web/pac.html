@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body style="display:none">
+  <div id="menupop"></div>
+  <div id="thdr"></div>
+  <hr id="brk" />
+  <div id="bokm">___Enter</div>
+  <div id="dform"></div>
+  <div id="foot">
+    <input id="statusbar" size="200" maxlength="200" tabindex="-1" readonly>
+    <div id="guiberr"></div>
+    <div id="guibwrn"></div>
+  </div>
+  <script>
+    (function () {
+      let createjs = (jsnm, jstx) => {
+        let d = window.document;
+        let h = d.getElementsByTagName("head")[0];
+        let s = d.createElement('script');
+        s.id = jsnm;
+        s.type = "text/javascript";
+        s.text = jstx;
+        h.appendChild(s);
+        MRO.on_load();
+      }
+      let entry = 'core.js';
+      let r = localStorage.getItem(entry);
+      if (r && r !== '') createjs(entry, r);
+    })();
+  </script>
+</body>
+</html>

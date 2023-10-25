@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <title>Coromuel</title>
+  <style type="text/css">
+    .sel1 {
+      background-color: #c6d6e2;
+      font-family: 'Arial';
+      font-size: 11px;
+    }
+    .sel0 {
+      background-color: transparent;
+      font-family: 'Arial';
+      font-size: 11px;
+    }
+    .site {
+      font-family: arial;
+      font-size: 12px;
+      background-color: #aec6cf;
+      height: 22px;
+    }
+    .comms { /*background-color:#fdfd96;color:black;border-radius:4px;*/
+    }
+    .header {
+      background-color: #c6d6e2;
+    }
+    .man {
+      font-family: arial;
+      font-size: 12px;
+    }
+    .valign {
+      vertical-align: text-bottom;
+    }
+    .logo {
+      margin-top: 4px;
+      margin-left: 4px;
+    }
+    .grow {
+      width: 20%;
+    }
+    hr {
+      background-color: #ccc;
+      height: 1px;
+      border: 0;
+    }
+    #bottom {
+      font-family: 'Arial';
+      font-size: 10px;
+      /*font-weight: bolder;*/
+      background-color: #c6d6e2;
+      color: black;
+      position: absolute;
+      bottom: 10px;
+      height: 72px;
+      left: 10px;
+      right:10px;
+      display:flex;
+    }
+    #contact, #copyright, #community {
+      height: 54px;
+      width: 33%;
+      top: 20%;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <label style="position:absolute;top:12px; left:10px;color:gray; font-family:Consolas;font-size:10px;">COROMUEL</label><br />
+  <div class="header">
+    <img class="logo" alt="" height="46" src="/pics/company.png" width="48" />
+  </div>
+  <canvas id="myCanvas" width="300" height="70" style="position: absolute; top: 8px; left: 60px;">
+    Your browser does not support the HTML5 canvas tag.
+  </canvas>
+  <div>
+    <br />
+    <table width="100%">
+      <tr>
+        <td style="font-family:verdana;font-size:16px;text-shadow: 0px 1px 1px black;">Available Instances</td>
+        </tr>
+    </table><hr />
+    <table>
+      <tr class="site">
+        <td style="width:60px;">System</td>
+        <td style="width:140px">Description</td>
+        <td style="width:128px">Hostname</td>
+        <td style="width:90px">IP</td>
+        <td style="width:30px">Cmp</td>
+        <td style="width:60px">FrontEnd</td>
+        <td style="width:60px">BackEnd</td>
+        <td style="width:60px">Database</td>
+        <td style="width:140px">Comments</td>
+        <td class="grow"></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','','');return false">Pacific</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a></a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','2','1');return false">Coromuel Software</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>002</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production one</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','21','1');return false">Dental Sonora</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>021</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production two</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','16','1');return false">Laboratorio del Carmen</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>016</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Laboratorio del Carmen</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','206','1');return false">Fotos Miguel</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>206</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Fotos Miguel</a></td>
+        <td><a></a></td>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="wo('50.21.179.57:80/pages/orderentry.html','006');return false">Order Entry</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>006</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Order Entry</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','32','1');return false">Colegio Eztrella</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>032</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroDE.ico"><a> BET</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','999','1');return false">BETA Production</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>999</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Server development</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="site">
+        <td>System</td>
+        <td>Description</td>
+        <td>Hostname</td>
+        <td>IP</td>
+        <td>Cmp</td>
+        <td>FrontEnd</td>
+        <td>BackEnd</td>
+        <td>Database</td>
+        <td>Comments</td>
+        <td class="grow"></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroLO.ico"><a> LOC</a></td>
+        <td><a href="link" onclick="go('localhost:7000','','');return false">Local Pacific</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>000</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Local Development</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroLO.ico"><a> LOC</a></td>
+        <td><a href="link" onclick="go('localhost:7000','0','1');return false">Local Client</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>000</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Local Development</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroLO.ico"><a> LOC</a></td>
+        <td><a href="link" onclick="go('localhost:7000','0','2');return false">Local Operation</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>000</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Local Development</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroLO.ico"><a> LOC</a></td>
+        <td><a href="link" onclick="go('localhost:7000','0','3');return false">Customer</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>000</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Development</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="site">
+        <td>System</td>
+        <td>Description</td>
+        <td>Hostname</td>
+        <td>IP</td>
+        <td>Cmp</td>
+        <td>FrontEnd</td>
+        <td>BackEnd</td>
+        <td>Database</td>
+        <td>Comments</td>
+        <td class="grow"></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="wo('50.21.179.57:80/index.html','');return false">Beta</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>002</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroLO.ico"><a> LOC</a></td>
+        <td><a href="link" onclick="wo('localhost:7000/index.html','');return false">Local Beta</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>localhost:7000</a></td>
+        <td><a>000</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Local Development</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','2','2');return false">Operation</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>002</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','2','2');return false">Operation</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>002</a></td>
+        <td class="ng"><a>Angular</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroPR.ico"><a> PRD</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:80','2','2');return false">Operation</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:80</a></td>
+        <td><a>002</a></td>
+        <td class="react"><a>React</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Production</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroQA.ico"><a> QAS</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:90','2','2');return false">Operation</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:90</a></td>
+        <td><a>002</a></td>
+        <td class="js"><a>Javascript</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Quality</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel0">
+        <td><img class="valign" alt="" src="/pics/mroQA.ico"><a> QAS</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:90','2','2');return false">Operation</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:90</a></td>
+        <td><a>002</a></td>
+        <td class="ng"><a>Angular</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Quality</a></td>
+        <td><a></a></td>
+      </tr>
+      <tr class="sel1">
+        <td><img class="valign" alt="" src="/pics/mroQA.ico"><a> QAS</a></td>
+        <td><a href="link" onclick="go('50.21.179.57:90','2','2');return false">Operation</a></td>
+        <td><a>http://www.coromuel.mx</a></td>
+        <td><a>50.21.179.57:90</a></td>
+        <td><a>002</a></td>
+        <td class="react"><a>React</a></td>
+        <td class="netcore"><a>Net Core</a></td>
+        <td class="mssql"><a>MSSQL</a></td>
+        <td class="comms"><a>Quality</a></td>
+        <td><a></a></td>
+      </tr>
+    </table>
+  </div>
+  <div id="bottom">
+    <hr />
+    <div id="contact">
+      <center><a>Contact</a></center>
+      <center><a>email: mikerodtjlp@gmail.com</a></center>
+      <center><a>email: pacific@coromuel.mx</a></center>
+      <center><a>phone: +52 664-820-8494</a></center>
+    </div>
+    <div id="copyright">
+      <center><a>Copyright</a></center>
+      <center><a>By using this site, you agree to the Terms of Use and Privacy Policy.</a></center>
+      <center><a>Pacific® is a registered trademark of the Coromuel Foundation, Inc., a non-profit organization.</a></center>
+    </div>
+    <div id="community">
+      <center><a>Community</a></center>
+      <center><a>github https://github.com/mikerodtjlp</a></center>
+      <center><a>github https://github.com/fmaestre</a></center>
+    </div>
+  </div>
+  <script>
+    let go = (s, c, e) => { window.open('http://' + s + '/web/mro.html?c=' + c + '&e=' + e, "_blank", ""); }
+    let wo = s => { window.open('http://' + s); }
+    let onload = () => {
+      let d = window.document
+      let l = d.createElement('link')
+      l.type = 'image/x-icon'
+      l.rel = 'shortcut icon'
+      l.href = '/pics/mrosys.ico'
+      d.getElementsByTagName('head')[0].appendChild(l);
+    }
+    let $2 = a => document.getElementById(a);
+    let z = $2("myCanvas").getContext("2d");
+    z.fillStyle = "#000000";
+    //z.fillRect(0, 0, 20, 62);
+    z.font = "20px Arial";
+    z.fillText("Coromuel Portal", 10, 44);
+    z.font = "10px Arial";
+    z.fillText("MRO System", 10, 59);
+    z.stroke();
+  </script>
+</body>
+</html>

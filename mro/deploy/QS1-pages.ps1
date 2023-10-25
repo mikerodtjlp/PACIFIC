@@ -1,0 +1,1 @@
+﻿robocopy c:\pacific\deploy\pages c:\pacific\QS1\pages *.*

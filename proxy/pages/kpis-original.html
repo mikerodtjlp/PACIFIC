@@ -1,0 +1,230 @@
+<html>
+<head>
+<style type="text/css">
+ table{width:500px;}
+ body{font-family:Verdana;}
+   th{
+	    padding:15px;
+		border: 1px solid gray;
+		background-color:#CEECF5;
+   }
+   .c1
+	{
+		width:100px;
+	    padding:15px;
+		border: 1px solid gray;
+		background-color:#CEECF5;
+	}
+	.c2
+	{
+		border: 1px solid gray;
+		padding:5px;
+		text-align:center;
+		background-color:#E0ECF8;
+	}
+	.tit{
+		text-align:center;
+		font-size:16pt;
+		padding:10px;
+	}
+	.t2{
+	  font-size:18pt;
+	}
+</style>
+<script type="text/javascript">
+var aUrls=[  "http://10.1.24.47:7004/core.aspx?fun=execute_query&hdr=[zhdr:[retjson:1]]&prms=[zvalues:[query:embedded][sqltext:execute kpi_production_order_overdue]]&bas=[zbasics:[p_langu:ES]]&proxysvr=10.1.24.251&proxyprt=7000"
+            ,"http://10.1.24.47:7004/core.aspx?fun=execute_query&hdr=[zhdr:[retjson:1]]&prms=[zvalues:[query:embedded][sqltext:execute kpi_production_throughput]]&bas=[zbasics:[p_langu:ES]]&proxysvr=10.1.24.251&proxyprt=7000"
+			,"http://10.1.24.47:7004/core.aspx?fun=execute_query&hdr=[zhdr:[retjson:1]]&prms=[zvalues:[query:embedded][sqltext:execute kpi_production_OTD]]&bas=[zbasics:[p_langu:ES]]&proxysvr=10.1.24.251&proxyprt=7000"];
+  
+function getXMLHttp() 
+{
+	var xmlhttp;
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari			
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {// code for IE6, IE5			
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+	
+	return xmlhttp;
+}
+
+function process_url()
+{
+   
+	 for (i=0;i<aUrls.length;i++)
+       {
+	     theurl=aUrls[i];
+		 execute(theurl,i);
+	   }
+	   
+}
+
+function execute(theurl,no)
+{
+  
+	var xmlhttp = getXMLHttp();
+	
+		xmlhttp.onreadystatechange = function () 
+		{
+	
+				if (xmlhttp.readyState == 4) 
+				{  
+			
+					if (xmlhttp.status != 200)
+					{				
+						return;
+					}
+					
+					var thejson=parseJson(xmlhttp.responseText);
+					
+					process_json(thejson,no);
+				}
+			
+         }
+    var url = theurl;
+	try{
+    xmlhttp.open("POST", url, true);
+    //xmlhttp.open("POST", url, false);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send();	
+	
+	}
+			catch(e)
+			{
+				alert(" fallo : "+e.description);
+			}
+			finally{
+			
+			}
+}
+
+function parseJson(str)
+{
+  var o = null;
+   try
+   {
+ 	    var str='{' + str + '}';
+		o=eval('('+str+')') ;
+   }catch(e)
+   {
+    alert('error parsing the json string :'+e.description);
+   }
+   return o;
+}
+
+function process_json(json,no)
+{
+ var maxlist = 10; 
+ //check if tabla n existe
+  for(l=0;l<maxlist;l++)
+  {
+     if(eval('json.zl'+l+'rows'))
+	 {
+	  write_list(json,l,no);
+	 }
+	  else
+	    break;
+  }
+  
+}
+function getLetra(c)
+{
+  var l="x";
+  switch(c)
+  {
+     case 1: l="A"; break;
+	 case 2: l="B"; break;
+	 case 3: l="C"; break;
+	 case 4: l="D"; break;
+	 case 5: l="E"; break;
+	 case 6: l="F"; break;
+	 case 7: l="G"; break;
+	 case 8: l="H"; break;
+	 case 9: l="I"; break;
+	 case 10: l="J"; break;
+	 case 11: l="K"; break;
+	 case 12: l="L"; break;
+	 case 13: l="M"; break;
+	 case 14: l="N"; break;
+	 case 15: l="O"; break;
+	 case 16: l="P"; break;
+	 case 17: l="Q"; break;
+	 case 18: l="R"; break;
+	 case 19: l="S"; break;
+	 case 20: l="T"; break;
+	 case 21: l="U"; break;
+	 case 22: l="V"; break;
+	 case 23: l="W"; break;
+	 case 24: l="X"; break;
+	 case 25: l="Y"; break;
+	 case 26: l="Z"; break;
+	 
+  }
+  
+  return l;
+}
+
+function getTitulo(li)
+{
+  var html ="";
+  switch(li)
+  {
+    case 0:
+	   html="<tr><th>bsu</th><th>orders</th><th>quantity</th><th>%open</th></tr>";
+	   break;
+    case 1:
+	   html="<tr><th>bsu</th><th>average</th><th>max</th><th>min</th></tr>";
+	   break;
+    case 2:
+	   html="<tr><th>bsu</th><th>quantity/date</th><th>item-quantity-date</th></tr>";
+	   break;	   
+  }
+  return html;
+}
+function write_list(o,l,no)
+{
+  var thtml = "";
+  var maxrows = 20000; 
+  var maxcols=100;
+  
+  if(no==0)thtml+="<br/><div class='t2'>orders overdue<hr/></div>";
+  if(no==1)thtml+="<br/><div class='t2'>throughput<hr/></div>";
+  if(no==2)thtml+="<br/><div class='t2'>OTD<hr/></div>";
+  
+  thtml+="<div>";
+  thtml+="<table>";
+  thtml+=getTitulo(no);
+  
+	for(r=0;r<maxrows;r++)
+	{
+		if(!eval('o.l'+l+r+'A'))break;
+
+		thtml+="<tr>";
+		for(c=1;c<=maxcols;c++)
+		{
+		  var col =getLetra(c);
+		  var css="c2";
+		  if(col=="A")css="c1";
+		  if(!eval('o.l'+l+r+col))break;
+		  thtml+="<td class='"+css+"'>"+eval('o.l'+l+r+col)+"</td>";
+		}
+		thtml+="</tr>";
+	}
+	thtml+="</table>";
+    thtml+="</div>";
+	document.getElementById("dresp").innerHTML+=thtml;
+	
+	thtml=null;
+}
+
+</script>
+</head>
+<body onload="process_url();">
+	<div class="tit">Reporte de KPIs</div>
+<!--input type="button" value="run" onclick="process_url(this);" /-->
+<hr/>
+<div id="dresp"></div>
+</body>
+
+</html>

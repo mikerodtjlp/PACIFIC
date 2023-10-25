@@ -1,0 +1,1 @@
+﻿robocopy c:\pacific\deploy\web c:\pacific\MRO\web *.*

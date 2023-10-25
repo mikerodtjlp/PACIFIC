@@ -1,0 +1,202 @@
+{  
+    margin: 0;  
+    padding: 0;  
+}
+body{
+	background:#eee;
+	font-family: Arial;
+}
+/* page core */  
+div#core {  
+    display: block;  
+    clear: both;  
+    margin-bottom: 50px; 
+	margin-top:80px;
+	padding-bottom: 10px; 
+	height: 2in;
+	background: #daf09a; 
+	//box-shadow : 1px 2px 1px #333;
+	box-shadow:   inset 0 0 10px #000000;
+    //width:85.6%; 
+	width:100%; 
+}  
+section#seg1 {  
+    width: 100%;  
+    float: left;  
+    margin: 0 1px;    	
+}  
+
+header h1 #rpt{
+	font:bold 16px Arial, Verdana;	
+}
+header h1 #rpt2{
+	font:12px Arial, Verdana;	
+	margin-left: 60%;
+	text-align:right;	
+    color: blue;	
+}
+#PopUp{
+		display: none; 
+		position: absolute; 
+		left: 100px; top: 50px; 
+		border: solid black 1px; 
+		padding: 5px; 
+		background-color:#FFFFFF;
+		text-align: justify; 
+		font-size: 12px; 
+		width: 85px; 	
+        border-radius: 6px;		
+}
+
+ div#pop-up {
+        display: none;
+        position: absolute;
+        width: 280px;
+        padding: 10px;
+        background: #eeeeee;
+        color: #000000;
+        border: 1px solid #1a1a1a;
+        font-size: 90%;
+		font-family: Arial, Helvetica, sans-serif;
+      }
+	  
+ div#pop-up input {
+        background: yellow;
+        color: #000000;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-left:10px;
+      }
+ div#pop-up span {	    
+        display: inline-block;
+        background: #eeeeee;
+        color: #000000;
+		font-family: Arial, Helvetica, sans-serif;			
+      }
+	  
+
+ div#pop-up a {	    
+        display: inline-block;
+        background: #eeeeee;
+        color: #000000;
+		font-family: Arial, Helvetica, sans-serif;	
+        width: 50px;	
+		margin-top:20px;	
+      }	  
+	  
+#sprod{
+	font:bold 8px Arial, Verdana;
+	padding-right: 5px;
+	border: solid white 1px;	
+    display:inline-block;	
+	width: 20px;
+	box-shadow:inset 0 0 10px #D6FFC2;
+	//background-color:#D6FFC2;
+}
+
+#sprodt{
+	font: bold 8px Arial, Verdana;
+	padding-right: 5px;
+	border: solid white 1px;	
+    display:inline-block;	
+	width: 20px;
+	background-color:#000000;
+	color:#FFFFFF;
+}
+
+/* formato de layout */
+header, footer, aside, nav, article {  
+    display: block;  
+}
+
+header nav {  
+    position: absolute;  
+    left: 0;  
+    width: 100%;  
+    background: #cccccc;  
+} 
+header nav ul {  
+    margin: 0 0 0 0;  
+    width: 940px;  
+    list-style: none;  
+}
+header nav ul li {  
+    float: left;  
+}  
+header nav ul li a {  
+	display: block;  
+	margin-right: 20px;  
+	width: 140px;  
+	font-size: 14px;  
+	line-height: 33px;  
+	text-align: left;  
+	text-decoration: none;  
+	color: #777;  
+}  
+
+header nav ul li a:hover {  
+		color: #fff;  
+}  
+
+/*------------------------------
+=FOOTER
+------------------------------*/
+footer {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height:38%;
+	background: #CCC;	
+}
+footer div {
+		display: table;
+		margin: 0 auto;
+		padding: 20px 0;
+		//width: 940px;
+		width: 90%;
+		color: #777;
+		
+}
+footer div section {
+			display: table-cell;
+			width: 0px;
+}
+footer div #Poly, footer div #MxMo , footer div #Cr39, footer div #Opal {
+	padding-right: 20px;
+}
+footer h3 {
+		color: #888;		
+}
+footer a {
+		color: #999;
+}
+footer a:hover {
+			color: #FFF;
+			text-decoration: none;
+}
+footer ul {
+		margin: 0 0 0 0;
+		list-style: square;
+		color: #565656;	
+}
+footer ul li a {
+			display: block;
+			font-size:110%;	
+}
+
+footer ul li a span {
+	
+		position: absolute;
+        text-decoration: none;	    
+		font-size:60%;	
+		font:bold;	
+		padding-left:3px;
+		
+        
+		
+	    color: #00CCFF;
+        text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+        font: 'ChunkFiveRegular';
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=#FFFFFF,direction=45); //IE9
+        
+		  
+}

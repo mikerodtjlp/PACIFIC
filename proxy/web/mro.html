@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body style="display:none">
+  <div id="aphdr"></div>
+  <div id="menu"></div>
+  <div id="inpbar">
+    <div id="bok_"></div>
+    <input id="command" placeholder=" Search for services, features, marketplace products, and docs" maxlength="64" size="24" tabindex="-1">
+    <div id="bhis"></div>
+  </div>
+  <div id="stdbtns">
+    <img alt="" id="lgimg" src="">
+    <input id="tit" tabindex="-1" readonly="readonly" disabled="disabled" size="24">
+    <input id="usrid" tabindex="-1" readonly="readonly" disabled="disabled" size="32">
+  </div>
+  <div id="thdr"></div>
+  <hr id="brk" />
+  <div id="cmdbar">
+    <div id="bbck"></div>
+    <div id="bout"></div>
+    <div id="bhom"></div>
+    <div id="bfrw"></div>
+    <div id="bnwa"></div>
+    <div id="bdsg"></div>
+    <div id="bfav"></div>
+    <div id="bhlp"></div>
+  </div>
+  <div id="dtree" style="display:none;width:200px;">
+    <ul id="tree0" class="mrotree" style="width:480px;"></ul>
+    <hr />
+    <ul id="tree1" class="mrotree" style="width:480px;"></ul>
+  </div>
+  <div id="tbox"></div>
+  <div id="dform"></div>
+  <div id="foot">
+    <input id="statusbar" size="200" maxlength="200" tabindex="-1" disabled="disabled" readonly>
+    <input id="fbia" size="8" tabindex="-1" disabled="disabled" readonly>
+    <input id="fbjb" size="5" value="   Job" tabindex="-1" disabled="disabled" readonly>
+    <input type="checkbox" id="exjb">
+    <input id="fbos" size="5" value="   Support" tabindex="-1" disabled="disabled" readonly>
+    <input type="checkbox" id="onsu">
+    <input id="fbin" size="8" tabindex="-1" readonly>
+    <input id="fusr" size="8" tabindex="-1" readonly>
+    <input id="fbid" size="3" tabindex="-1" readonly>
+    <input id="fbic" size="16" tabindex="-1" readonly>
+    <input id="fbix" size="3" tabindex="-1" readonly>
+    <input id="fbil" size="2" tabindex="-1" readonly>
+    <div id="guiberr"></div>
+    <div id="guibwrn"></div>
+    <div id="btsk"></div>
+    <div id="bsct"></div>
+    <div id="bfnd"></div>
+    <div id="binf"></div>
+  </div>
+  <div id="prof" style="display:none;"></div>
+  <div id="contact">
+    <center><a>contact: pacific@coromuel.mx</a></center>
+    <center><a>github: https://github.com/mikerodtjlp/pacific</a></center>
+  </div>
+  <!--<script id="core.js" src="../web/core.js"></script>-->
+  <!--<script>MRO.load('/web/', 'core.js', true);</script>-->
+  <script>
+  (function () {
+    let createjs = (jsnm, jstx) => {
+      let d = window.document;
+      let h = d.getElementsByTagName("head")[0];
+      let s = d.createElement('script');
+      s.id = jsnm;
+      s.type = "text/javascript";
+      s.text = jstx;
+      h.appendChild(s);
+      MRO.on_load();
+    }
+
+    let entry = 'core.js';
+    let l = localStorage;
+    let v = l.getItem(entry + '.ver.new');
+    let d = l.getItem(entry + '.ver') !== v;
+
+    if (!d) {
+      let r = l.getItem(entry);
+      if (r === null || r === '') d = true;
+      else createjs(entry, r);
+    }
+
+    if (d) {
+      l.setItem(entry + '.ver', v);
+
+      let req = new Request(/*'web/' +*/ entry, {
+        method: 'get',
+        mode: 'cors',
+        redirect: 'follow',
+        headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" }
+      });
+      fetch(req).then(response => response.text()).then(r => {
+        l.setItem(entry, r);
+        createjs(entry, r);
+      });
+    }
+  })();
+</script>
+</body>
+</html>

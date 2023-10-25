@@ -1,0 +1,117 @@
+<!DOCTYPE html><html>
+<head>
+<title>Global system</title>
+<style type="text/css">
+.sel1 { background-color:#dedede;font-family:'Arial'; font-size:42px; }
+.sel0 { background-color:#efefef;font-family:'Arial'; font-size:42px; }
+.site { font-family:arial; color:gray;font-size:30px; }
+.man { font-family:arial; font-size:36px;}
+hr { background-color: #ccc; height: 1px; border: 0; }
+</style>
+</head>
+<body>
+<div>
+<img alt="" height="56" src="/pics/company.png" width="57"/>
+</div>
+<canvas id="myCanvas" width="640" height="150" style="position:absolute;top:8px;left:70px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<br /><br /><br /><br /><br />
+<div align="center">
+<img alt="" height="230" width="1028" src="/web/header.jpg" />
+</div>
+<div>
+<table width="100%">
+<tr><td style="font-family:verdana;font-size:48px;font-weight:lighter;">Global system</td>
+    <td align="right"><a style="font-family:verdana;font-size:24px;" href="http://10.1.24.47:8950">online help</a></td>
+    <td align="right"><a style="font-family:verdana;font-size:24px;" href="http://10.1.24.65" target="_blank">help desk</a></td>
+</table>
+<hr/>
+<label style="font-family:Arial;font-size:36px;font-weight:bold;">Tijuana Mexico 2016 lens division</label><br />
+<table>
+<tr class="site">
+    <td>site Mexico MXMA</td>
+    <td>site China CNMA</td>
+    <td>site Brazil BRMA</td>
+    <td>site Hungary HUMA</td>
+    <td>site local machine</td>
+</tr>
+<tr>
+    <td colspan="1"><hr/></td>
+    <td colspan="1"><hr/></td>
+    <td colspan="1"><hr/></td>
+    <td colspan="1"><hr /></td>
+    <td colspan="1"><hr/></td>
+</tr>
+<tr class="sel0">
+    <td><a id="p0" href="link" onclick="go(d[0]); return false"></a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>
+<tr class="sel1" >
+    <td><a id="p1" href="link" onclick="go(d[1]); return false"></a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>
+<tr class="sel0">
+    <td><a href="link" onclick="go('10.1.24.44:8900'); return false">QA1 quality assurance</a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>
+<tr class="sel1">
+    <td><a href="link" onclick="go('10.1.24.44:7000'); return false">QA2 quality assurance</a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>
+<tr class="sel0">
+    <td><a href="link" onclick="go('10.1.24.46:8900'); return false">SB1 sand box</a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>
+<tr class="sel1">
+    <td><a href="link" onclick="go('10.1.24.47:7000'); return false">SB2 sand box</a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>    
+<tr class="sel0">
+    <td><a href="link" onclick="go('10.1.24.47:8900'); return false">DE1 development</a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td><td><a></a></td>
+</tr>
+<tr class="sel1">
+    <td><a href="link" onclick="go('10.1.24.46:7000'); return false">DE2 development</a></td>
+    <td><a></a></td><td><a></a></td><td><a></a></td>
+    <td><a href="link" onclick="go('localhost:8900'); return false">LOC dev.</a></td>
+</tr>       
+</table>
+</div>
+<div style="position:absolute;bottom:30px;height:30px;width:97%;">
+<hr/>
+<center><a style="font-family:arial;font-size:24px; color:gray;" 
+href="mikerodtjlp@gmail.com">contact: customer service</a></center>
+</div>
+<script type="text/javascript">function go(s){window.open('http://'+s+'/web/mro.html',"_blank","");}
+onload=function(){var d=window.document
+var l=d.createElement('link')
+l.type='image/x-icon'
+l.rel='shortcut icon'
+l.href='/pics/mrosys.ico'
+d.getElementsByTagName('head')[0].appendChild(l);
+}
+function $2(a) { return document.getElementById(a) }
+d = [];
+if (new Date().getSeconds() % 2 == 0) {
+    $2('p0').text = 'PR3 production';
+    $2('p1').text = 'PR4 production';
+    d[0] = '10.1.24.251:7000'; d[1] = '10.1.24.120:7000';
+}
+else {
+    $2('p1').text = 'PR3 production';
+    $2('p0').text = 'PR4 production';
+    d[1] = '10.1.24.251:7000'; d[0] = '10.1.24.120:7000';
+}
+var c = $2("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#00AADD";
+ctx.fillRect(10, 0, 20, 140);
+ctx.font = "60px Arial";
+ctx.fillText("Pacific Framework", 35, 50);
+ctx.fillText("Shop Floor Application", 35, 100);
+ctx.font = "30px Arial";
+ctx.fillText("MRO System", 35, 140);
+ctx.stroke();
+</script>
+</body>
+</html>		

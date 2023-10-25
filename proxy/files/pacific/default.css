@@ -1,0 +1,168 @@
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND: url(/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/bg.body.png) #f0f0f0 no-repeat left top
+}
+H1 {
+	LINE-HEIGHT: 1.3em; MARGIN: 0em; FONT-SIZE: 1.13em; FONT-WEIGHT: normal
+}
+H2 {
+	LINE-HEIGHT: 1.3em; MARGIN: 0em; FONT-SIZE: 0.87em
+}
+H3 {
+	FONT-SIZE: 0.75em
+}
+H4 {
+	LINE-HEIGHT: 1.3em; MARGIN: 0px; FONT-SIZE: 0.75em; FONT-WEIGHT: normal
+}
+P {
+	LINE-HEIGHT: 1.3em; MARGIN: 0px; FONT-SIZE: 0.75em
+}
+P.imglinkSecure {
+	MARGIN: 0px; PADDING-LEFT: 0.93em; BACKGROUND: url(file:///C:/Users/SMuro/Documents/My%20Web%20Sites/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/imglink_secure.gif) no-repeat 0px 3px
+}
+A {
+	COLOR: #000000; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+DIV#top {
+	POSITION: absolute; WIDTH: 61.25em; HEIGHT: 7em; TOP: 0px; LEFT: 0px
+}
+DIV#logo {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 24em; HEIGHT: 8em; TOP: 0px; LEFT: 0px
+}
+IMG#img_logo {
+	MARGIN: 1.75em 0em 0em 3.75em
+}
+DIV#explore {
+	Z-INDEX: 2; POSITION: absolute; BOTTOM: 0.05em; FONT-SIZE: 0.63em; LEFT: 20.62em
+}
+DIV#explore A {
+	TEXT-TRANSFORM: uppercase; COLOR: #7d7d7d; MARGIN-LEFT: 0.25em
+}
+DIV#explore IMG {
+	MARGIN-BOTTOM: 0px; FONT-SIZE: 1.58em
+}
+DIV#categories {
+	POSITION: absolute; WIDTH: auto; RIGHT: 0.75em; TOP: 6em
+}
+DIV#categories A {
+	COLOR: #7d7d7d; TEXT-DECORATION: none
+}
+DIV#categories A:hover {
+	COLOR: #7d7d7d; TEXT-DECORATION: none
+}
+DIV.catnav {
+	PADDING-LEFT: 0.25em; FLOAT: left; HEIGHT: 1em
+}
+DIV.catnavaktiv {
+	PADDING-LEFT: 0.25em; FLOAT: left; HEIGHT: 1em
+}
+DIV.catnav P {
+	MARGIN: 0em 0.38em 0em 0.13em
+}
+DIV.catnavaktiv P {
+	MARGIN: 0em 0.38em 0em 0.13em
+}
+DIV.topnav {
+	BORDER-LEFT: #d2d2d2 0.13em solid; FLOAT: left; HEIGHT: 1em
+}
+DIV#funcnav {
+	POSITION: absolute; WIDTH: 11.25em; TOP: 8.68em; LEFT: 1.18em
+}
+DIV#funcnav P.imglink {
+	LINE-HEIGHT: 1.33em; PADDING-LEFT: 0.93em; MARGIN-BOTTOM: 0px; BACKGROUND: url(/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/arrow.png) no-repeat 0px 4px
+}
+DIV#funcnav A {
+	COLOR: #7d7d7d
+}
+DIV#searchdiv {
+	POSITION: absolute; WIDTH: 12.5em; OVERFLOW: hidden; TOP: 15.37em; LEFT: 1.13em
+}
+DIV#searchdiv INPUT {
+	BORDER-BOTTOM: #d9d9d9 0.1em solid; BORDER-LEFT: #d9d9d9 0.1em solid; WIDTH: 157px; FLOAT: left; HEIGHT: 22px; BORDER-TOP: #d9d9d9 0.1em solid; BORDER-RIGHT: #d9d9d9 0.1em solid
+}
+DIV.button {
+	POSITION: relative; WIDTH: 0.56em; FLOAT: left; HEIGHT: auto; CURSOR: pointer
+}
+DIV.button IMG {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; VERTICAL-ALIGN: middle; PADDING-TOP: 2px
+}
+DIV#topvisual {
+	Z-INDEX: 3; POSITION: absolute; WIDTH: 49.19em; HEIGHT: 7.5em; TOP: 7em; LEFT: 13em
+}
+DIV#pagetitle {
+	POSITION: absolute; WIDTH: 27em; TOP: 17.75em; LEFT: 13em
+}
+DIV#column0 {
+	POSITION: absolute; WIDTH: 10em; TOP: 20.12em; LEFT: 1.13em
+}
+DIV#tagcloudBox {
+	BORDER-BOTTOM: #e9e9e9 0.06em solid; TEXT-ALIGN: center; BORDER-LEFT: #e9e9e9 0.06em solid; PADDING-BOTTOM: 0.75em; BACKGROUND-COLOR: #fff; MARGIN: 0.87em 0px 1em; PADDING-LEFT: 1em; WIDTH: 7.81em; PADDING-RIGHT: 1em; BORDER-TOP: #e9e9e9 0.06em solid; BORDER-RIGHT: #e9e9e9 0.06em solid; PADDING-TOP: 0.87em
+}
+DIV#tagcloudBox P {
+	LINE-HEIGHT: 1.66em
+}
+DIV#tagcloudBox A {
+	COLOR: #626262
+}
+.one {
+	FONT-SIZE: 11px
+}
+.two {
+	FONT-SIZE: 12px
+}
+.three {
+	FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.four {
+	COLOR: #000 !important; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+DIV.teaserbox {
+	BORDER-BOTTOM: #eaeaea 1px solid; BORDER-LEFT: #eaeaea 1px solid; BACKGROUND-COLOR: #fff; BORDER-TOP: #eaeaea 1px solid; BORDER-RIGHT: #eaeaea 1px solid
+}
+DIV.teaserbox DIV.teasertext {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; PADDING-TOP: 0px
+}
+DIV.teaserbox P.imglink {
+	LINE-HEIGHT: 1.33em; MARGIN: 0px; PADDING-LEFT: 0.93em; BACKGROUND: url(/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/arrow.content.png) no-repeat 0px 4px
+}
+DIV#columnheader01 {
+	POSITION: absolute; WIDTH: 12.5em; TOP: 20.12em; LEFT: 13em
+}
+DIV#columnheader02 {
+	POSITION: absolute; WIDTH: 12.5em; TOP: 20.12em; LEFT: 27.5em
+}
+DIV#columnheader03 {
+	POSITION: absolute; WIDTH: 19.12em; ; WIDTH: expression(document.body.clientWidth < 910 ? "auto" : "19.125em" ); MAX-WIDTH: 19.12em; TOP: 20.12em; LEFT: 42em
+}
+DIV#columnheader03 H2 {
+	
+}
+DIV#column01 {
+	MARGIN: 0.68em 0px 1em
+}
+DIV#column02 {
+	MARGIN: 0.68em 0px 1em
+}
+DIV#column03 {
+	MARGIN: 0.68em 0px 1em
+}
+DIV#column01 P.imglink {
+	LINE-HEIGHT: 1.33em; MARGIN: 0px; PADDING-LEFT: 0.93em; BACKGROUND: url(/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/arrow.content.png) no-repeat 0px 4px
+}
+DIV#column02 P.imglink {
+	LINE-HEIGHT: 1.33em; MARGIN: 0px; PADDING-LEFT: 0.93em; BACKGROUND: url(/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/arrow.content.png) no-repeat 0px 4px
+}
+DIV#column03 P.imglink {
+	LINE-HEIGHT: 1.33em; MARGIN: 0px; PADDING-LEFT: 0.93em; BACKGROUND: url(/C1256BA7003E1EB8/ContainerTitel/HomepageGrey/$File/arrow.content.png) no-repeat 0px 4px
+}
+DIV#column03 A {
+	FONT-WEIGHT: bold
+}
+DIV#column03 P.imglink {
+	MARGIN-BOTTOM: 1.33em
+}
